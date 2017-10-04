@@ -1,4 +1,6 @@
 import { Component } from '@stencil/core';
+import { APIService } from '../../services/api-service';
+import { Inject } from '../../utils';
 
 
 @Component({
@@ -6,6 +8,8 @@ import { Component } from '@stencil/core';
   styleUrl: 'hello-world.scss'
 })
 export class HelloWorld {
+
+  @Inject('api-service') api: APIService;
 
   render() {
     return;
