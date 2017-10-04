@@ -8,7 +8,9 @@ export class APIService {
     console.log('API Service up and running');
   }
 
-  get(path: string) {}
+  async get(path: string) {
+    return 'Mock data';
+  }
 
   render() {
     return;

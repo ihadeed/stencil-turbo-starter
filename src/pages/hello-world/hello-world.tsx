@@ -1,6 +1,6 @@
 import { Component } from '@stencil/core';
 import { APIService } from '../../services/api-service';
-import { Inject } from '../../utils';
+import { Inject, Service } from '../../utils';
 
 
 @Component({
@@ -9,7 +9,15 @@ import { Inject } from '../../utils';
 })
 export class HelloWorld {
 
-  @Inject('api-service') api: APIService;
+  @Inject('api-service') api: Service<APIService>;
+
+  async componentWillLoad() {
+    // let's get some data before the page boots up
+    let api: APIService = await this.api;
+    let res = await api.get('https://some/website/path');
+
+    console.log(res);
+  }
 
   render() {
     return;
