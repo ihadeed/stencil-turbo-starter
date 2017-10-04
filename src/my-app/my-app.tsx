@@ -8,7 +8,7 @@ export class MyApp {
   render() {
     return [
       <div class="page-header">
-        <h1>EEVEX</h1>
+        <h1>TurboCharged</h1>
       </div>,
       <nav class="page-nav">
         <stencil-route-link url="/">Home</stencil-route-link>
