@@ -19,8 +19,7 @@ export class MyApp {
         <stencil-route url="/" component="home-page" exact={true} />
         <stencil-route url="/events" component="events-page" exact={true} />
         <stencil-route url="/venues" component="venues-page" exact={true} />
-      </stencil-router>,
-      <api-service></api-service>
+      </stencil-router>
     ];
   }
 }
