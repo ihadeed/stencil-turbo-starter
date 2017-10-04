@@ -1,0 +1,30 @@
+{
+  "name": "stencil-ssr-starter",
+  "version": "0.0.1",
+  "private": true,
+  "main": "server.js",
+  "description": "Stencil starter with server-side rendering",
+  "scripts": {
+    "build": "stencil build",
+    "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
+    "serve": "stencil-dev-server",
+    "start": "npm run dev",
+    "start:ssr": "sd concurrent \"stencil build --dev --watch\" \"node server.js\"",
+    "g": "node generator"
+  },
+  "dependencies": {
+    "@stencil/core": "next",
+    "@stencil/router": "latest",
+    "express": "^4.15.5"
+  },
+  "devDependencies": {
+    "@stencil/dev-server": "latest",
+    "@stencil/utils": "latest",
+    "lodash": "^4.17.4",
+    "mkdirp": "^0.5.1",
+    "yargs": "^9.0.1"
+  },
+  "engines": {
+    "node": ">=6.11.0"
+  }
+}

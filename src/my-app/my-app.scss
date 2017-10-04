@@ -1,0 +1,14 @@
+my-app {
+  div.page-header {
+
+  }
+  nav.page-nav {
+    stencil-route-link a {
+      display: inline-block;
+      padding: 10px 5px;
+    }
+  }
+  stencil-router {
+
+  }
+}
