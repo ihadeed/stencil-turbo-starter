@@ -40,6 +40,12 @@ function getSCSS(name) {
 }
 
 function createFile(name, type, sass = CONFIG.sass) {
+  type = type.toLowerCase();
+
+  if (type === 'service' && !name.toLowerCase().includes('service')) {
+    name += 'Service';
+  }
+
   let ROOT, FILE_NAME = kebabCase(name);
 
   if (FILE_NAME.split('-').length < 2) {
@@ -47,7 +53,6 @@ function createFile(name, type, sass = CONFIG.sass) {
     process.exit();
   }
 
-  type = type.toLowerCase();
 
   switch(type) {
     case 'page':
